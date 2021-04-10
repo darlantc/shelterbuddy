@@ -37,6 +37,27 @@ class AnimalEntity implements AnimalProps {
     this.gender = props.gender;
     this.color = props.color;
   }
+
+  static fromJson = (data: any): AnimalEntity | null => {
+    if (
+      data.hasOwnProperty("Id") &&
+      data.hasOwnProperty("Type") &&
+      data.hasOwnProperty("Breed") &&
+      data.hasOwnProperty("Sex") &&
+      data.hasOwnProperty("Features")
+    ) {
+      return new AnimalEntity({
+        id: data.Id,
+        name: data.Name,
+        type: data.Type.Name,
+        breed: data.Breed.Primary.Name,
+        gender: data.Sex.Name,
+        color: data.Features.PrimaryColour,
+      });
+    }
+
+    return null;
+  };
 }
 
 export default AnimalEntity;
