@@ -1,6 +1,6 @@
 # Shelter Buddy dashboard app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is automatically deployed at Vercel through CI/CD: [https://shelterbuddy.vercel.app/](https://shelterbuddy.vercel.app/)
 
 ## Available Scripts
 
