@@ -11,9 +11,10 @@ class FetchHttpService implements HttpService {
       const response = await fetch(url, {
         headers: this.defaultHeaders,
       });
+      const jsonData = await response.json();
       return {
         statusCode: response.status,
-        data: response.json(),
+        data: jsonData,
       };
     } catch (error) {
       return {
