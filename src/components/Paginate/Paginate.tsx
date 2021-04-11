@@ -1,18 +1,23 @@
 import { useState, Fragment } from "react";
-import { makeStyles } from "@material-ui/styles";
+import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 
 import IconButton from "../Button/IconButton";
 
 // Style
-const useStyles = makeStyles({
-  container: {
-    marginTop: 16,
-    width: "100%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    container: {
+      marginTop: 16,
+      width: "100%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "start",
+      [theme.breakpoints.down("sm")]: {
+        justifyContent: "center",
+      },
+    },
+  })
+);
 
 interface PaginateProps<T> {
   itemsList: T[];
@@ -42,14 +47,14 @@ const Paginate = <T,>({
 
   const renderNavigateButtons = () => {
     let children = [];
-    for (let index = 0; index < totalPages; index++) {
+    for (let index = 1; index < totalPages; index++) {
       children.push(
         <IconButton
           key={index}
           secondaryColor={index !== currentPage}
           onClick={() => setCurrentPage(index)}
         >
-          {index + 1}
+          {index}
         </IconButton>
       );
     }
