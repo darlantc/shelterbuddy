@@ -1,5 +1,4 @@
 :root {
-  --main-bg-color: brown;
   --black-color: #000121;
   --orange-color: #f47500;
   --blue-color: #002fd6;
@@ -21,4 +20,22 @@ header {
   display: flex;
   justify-content: center;
   margin: 96px 0;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.inline-badge {
+  background-color: var(--orange-color);
+  color: #fff;
+  border-radius: 100px;
+  padding: 4px 8px;
+  font-size: 14px;
+  margin: 0 8px;
+}
+
+#main-content {
+  padding: 0 96px;
 }
