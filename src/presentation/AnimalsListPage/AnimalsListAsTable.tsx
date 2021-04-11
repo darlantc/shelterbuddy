@@ -2,8 +2,8 @@ import { ReactElement } from "react";
 import Table from "../../components/Table/Table";
 import AnimalPhoto from "../../components/Animal/AnimalPhoto";
 import FlatButton from "../../components/Button/FlatButton";
+import { ChevronRightIcon } from "../../components/Icons/Icons";
 
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import AnimalEntity, { AnimalProps } from "../../entities/AnimalEntity";
 
 interface TableRowInterface extends AnimalProps {

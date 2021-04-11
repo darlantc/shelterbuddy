@@ -1,11 +1,11 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
 import { GridContainer, GridItem } from "../../components/Grid";
 import CollapsibleList from "../../components/Collapse/CollapsibleList";
 import RaisedButton from "../../components/Button/RaisedButton";
 import AnimalPhoto from "../../components/Animal/AnimalPhoto";
+import { ChevronRightIcon } from "../../components/Icons/Icons";
 
 import AnimalEntity from "../../entities/AnimalEntity";
 

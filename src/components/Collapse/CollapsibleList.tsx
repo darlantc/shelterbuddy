@@ -3,9 +3,10 @@ import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import { blueColor, lightGrayColor } from "../../assets/styles/styles";
 
+import { ExpandMoreIcon } from "../Icons/Icons";
+
+import { blueColor, lightGrayColor } from "../../assets/styles/styles";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {

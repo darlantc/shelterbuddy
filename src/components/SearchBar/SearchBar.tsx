@@ -1,8 +1,8 @@
 import React from "react";
-
 import { makeStyles } from "@material-ui/styles";
 import { OutlinedInput, InputAdornment } from "@material-ui/core";
-import SearchIcon from "@material-ui/icons/Search";
+
+import { SearchIcon } from "../../components/Icons/Icons";
 
 import { middleGrayColor } from "../../assets/styles/styles";
 
