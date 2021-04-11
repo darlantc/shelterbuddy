@@ -6,6 +6,8 @@ import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
+import TableSortLabel from "@material-ui/core/TableSortLabel";
+
 import {
   darkGrayColor,
   lightGrayColor,
@@ -45,23 +47,54 @@ const useStyles = makeStyles({
 });
 
 type TableColumn = {
-  id: string | number;
+  id: string;
   label?: string | ReactElement;
   align?: "left" | "center" | "right";
+  isSortable?: boolean;
 };
 
 export type TableRowOption<T> = {
-  id: string | number;
+  id: string;
   data: T;
 };
 
 export type TableProps<T> = {
   columns: TableColumn[];
   rows: TableRowOption<T>[];
+  orderBy?: string;
+  order?: "asc" | "desc";
+  onRequestSort?: (event: React.MouseEvent<unknown>, property: string) => void;
 };
 
-const Table = <T,>({ columns, rows }: TableProps<T>) => {
+const Table = <T,>({
+  columns,
+  rows,
+  orderBy,
+  order,
+  onRequestSort,
+}: TableProps<T>) => {
   const classes = useStyles();
+
+  const renderSortLabel = (column: TableColumn) => {
+    if (!onRequestSort) {
+      return column.label;
+    }
+
+    const isActive = orderBy === column.id;
+    const createSortHandler = (property: string) => (
+      event: React.MouseEvent<unknown>
+    ) => onRequestSort(event, property);
+
+    return (
+      <TableSortLabel
+        active={isActive}
+        direction={isActive ? order : "asc"}
+        onClick={createSortHandler(column.id)}
+      >
+        {column.label}
+      </TableSortLabel>
+    );
+  };
 
   return (
     <MaterialTable className={classes.table} aria-label="table">
@@ -69,7 +102,7 @@ const Table = <T,>({ columns, rows }: TableProps<T>) => {
         <TableRow>
           {columns.map((column) => (
             <TableCell key={column.id} classes={{ root: classes.headerCell }}>
-              {column.label}
+              {column.isSortable ? renderSortLabel(column) : column.label}
             </TableCell>
           ))}
         </TableRow>
