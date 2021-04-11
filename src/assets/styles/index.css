@@ -59,4 +59,14 @@ h1 {
     padding: 0 16px;
     margin: 58px 0;
   }
+
+  .thumbnail-photo {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+h2.animal-title {
+  font-size: 16px;
+  font-weight: 500;
 }

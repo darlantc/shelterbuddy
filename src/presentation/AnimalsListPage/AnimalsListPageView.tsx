@@ -3,6 +3,7 @@ import { Hidden } from "@material-ui/core";
 import { GridContainer, GridItem } from "../../components/Grid";
 import { Card } from "../../components/Card";
 import SearchBar from "../../components/SearchBar/SearchBar";
+import AnimalsListAsCard from "./AnimalsListAsCard";
 import AnimalsListAsTable from "./AnimalsListAsTable";
 
 import AnimalEntity from "../../entities/AnimalEntity";
@@ -33,7 +34,7 @@ const AnimalsListPageView = ({
       <GridItem xs>
         <Card>
           <GridContainer alignItems="center">
-            <GridItem xs>
+            <GridItem xs sm>
               <div style={{ display: "flex", alignItems: "center" }}>
                 <h1>Your Animals</h1>
                 <span className="inline-badge">{animalsList.length}</span>
@@ -51,6 +52,12 @@ const AnimalsListPageView = ({
             <GridItem xs>
               <Hidden smDown>
                 <AnimalsListAsTable
+                  animalsList={filteredAnimalsList}
+                  didWantToSeeDetails={didWantToSeeDetails}
+                />
+              </Hidden>
+              <Hidden mdUp>
+                <AnimalsListAsCard
                   animalsList={filteredAnimalsList}
                   didWantToSeeDetails={didWantToSeeDetails}
                 />
