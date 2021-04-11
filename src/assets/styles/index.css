@@ -6,7 +6,7 @@
   --dark-gray-color: #707183;
   --light-gray-color: #f8f8fc;
   --middle-gray-color: #a1a2af;
-  --background-color: #e0e7fd;
+  --background-color: #f6f7fa;
 }
 
 body {
@@ -15,4 +15,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-color);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin: 96px 0;
 }

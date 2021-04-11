@@ -1,8 +1,10 @@
+import { Fragment } from "react";
 import { HttpService } from "./services/HttpService";
 import { UseCasesContext } from "./useCases/UseCasesContext";
 import RequestAnimalsUseCase from "./useCases/RequestAnimalsUseCase";
 import RequestAnimalPhotoUseCase from "./useCases/RequestAnimalPhotoUseCase";
 
+import Header from "./components/Header/Header";
 import AnimalsListPageViewModel from "./presentation/AnimalsListPage/AnimalsListPageViewModel";
 
 const App = ({ httpService }: { httpService: HttpService }) => {
@@ -13,7 +15,12 @@ const App = ({ httpService }: { httpService: HttpService }) => {
         requestAnimalPhotoUseCase: new RequestAnimalPhotoUseCase(httpService),
       }}
     >
-      <AnimalsListPageViewModel />
+      <Fragment>
+        <Header />
+        <main id="main-content">
+          <AnimalsListPageViewModel />
+        </main>
+      </Fragment>
     </UseCasesContext.Provider>
   );
 };
