@@ -47,7 +47,7 @@ const Paginate = <T,>({
 
   const renderNavigateButtons = () => {
     let children = [];
-    for (let index = 1; index < totalPages; index++) {
+    for (let index = 1; index < totalPages + 1; index++) {
       children.push(
         <IconButton
           key={index}
