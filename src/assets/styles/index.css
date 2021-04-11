@@ -47,3 +47,16 @@ h1 {
   height: 48px;
   border-radius: 50px;
 }
+
+@media only screen and (max-width: 900px) {
+  header {
+    margin: 58px 0;
+  }
+  header #logo {
+    max-width: 206px;
+  }
+  #main-content {
+    padding: 0 16px;
+    margin: 58px 0;
+  }
+}
