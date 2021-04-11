@@ -8,6 +8,8 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import TableSortLabel from "@material-ui/core/TableSortLabel";
 
+import Paginate from "../Paginate/Paginate";
+
 import {
   darkGrayColor,
   lightGrayColor,
@@ -97,33 +99,46 @@ const Table = <T,>({
   };
 
   return (
-    <MaterialTable className={classes.table} aria-label="table">
-      <TableHead>
-        <TableRow>
-          {columns.map((column) => (
-            <TableCell key={column.id} classes={{ root: classes.headerCell }}>
-              {column.isSortable ? renderSortLabel(column) : column.label}
-            </TableCell>
-          ))}
-        </TableRow>
-      </TableHead>
-      <TableBody>
-        {rows.map((row) => (
-          <TableRow key={row.id} classes={{ root: classes.tableRow }}>
-            {columns.map((column) => (
-              <TableCell
-                key={`${row.id}_${column.id}`}
-                align={column.align || "left"}
-                classes={{ root: classes.rowCell }}
-              >
-                {/* @ts-ignore */}
-                {row.data[column.id] || "-"}
-              </TableCell>
-            ))}
-          </TableRow>
-        ))}
-      </TableBody>
-    </MaterialTable>
+    <Paginate<string> itemsList={rows.map(({ id }) => id)} itemsPerPage={10}>
+      {({ slicedList }) => (
+        <MaterialTable className={classes.table} aria-label="table">
+          <TableHead>
+            <TableRow>
+              {columns.map((column) => (
+                <TableCell
+                  key={column.id}
+                  classes={{ root: classes.headerCell }}
+                >
+                  {column.isSortable ? renderSortLabel(column) : column.label}
+                </TableCell>
+              ))}
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {slicedList.map((rowId) => {
+              const row = rows.find(({ id }) => rowId === id);
+              if (!row) {
+                return null;
+              }
+              return (
+                <TableRow key={row.id} classes={{ root: classes.tableRow }}>
+                  {columns.map((column) => (
+                    <TableCell
+                      key={`${row.id}_${column.id}`}
+                      align={column.align || "left"}
+                      classes={{ root: classes.rowCell }}
+                    >
+                      {/* @ts-ignore */}
+                      {row.data[column.id] || "-"}
+                    </TableCell>
+                  ))}
+                </TableRow>
+              );
+            })}
+          </TableBody>
+        </MaterialTable>
+      )}
+    </Paginate>
   );
 };
 
