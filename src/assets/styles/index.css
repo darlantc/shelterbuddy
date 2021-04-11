@@ -41,3 +41,9 @@ h1 {
   padding: 0 96px;
   margin: 96px 0;
 }
+
+.thumbnail-photo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50px;
+}
