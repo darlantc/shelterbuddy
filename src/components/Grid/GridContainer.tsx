@@ -7,15 +7,8 @@ import Grid, {
 } from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/styles";
 
-const HORIZONTAL_MARGIN = 96;
-
 const useStyles = makeStyles({
-  grid: {
-    margin: 0,
-    marginLeft: HORIZONTAL_MARGIN,
-    marginRight: HORIZONTAL_MARGIN,
-    width: `calc(100% - ${HORIZONTAL_MARGIN * 2}px)`,
-  },
+  grid: {},
 });
 
 interface GridContainerProps {
