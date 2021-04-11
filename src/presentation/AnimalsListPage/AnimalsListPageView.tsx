@@ -5,11 +5,15 @@ import { Card } from "../../components/Card";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import Table from "../../components/Table/Table";
 import AnimalPhoto from "../../components/Animal/AnimalPhoto";
+import FlatButton from "../../components/Button/FlatButton";
+
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
 import AnimalEntity, { AnimalProps } from "../../entities/AnimalEntity";
 interface TableRowInterface extends AnimalProps {
-  photo: string | ReactElement;
+  photo: ReactElement;
   name: string;
+  action: ReactElement;
 }
 
 const AnimalsListPageView = ({
@@ -25,6 +29,10 @@ const AnimalsListPageView = ({
   searchString: string;
   setSearchString: (searchString: string) => void;
 }) => {
+  const didWantToSeeDetails = (id: number) => () => {
+    console.log("didWantToSeeDetails", id);
+  };
+
   if (isFetching) {
     return <h1>Loading...</h1>;
   }
@@ -57,6 +65,7 @@ const AnimalsListPageView = ({
                 { id: "breed", label: "Breed" },
                 { id: "gender", label: "Gender" },
                 { id: "color", label: "Color" },
+                { id: "action" },
               ]}
               rows={filteredAnimalsList.map((animal) => {
                 const name = animal.name || "-";
@@ -75,6 +84,11 @@ const AnimalsListPageView = ({
                     breed: animal.breed,
                     gender: animal.gender,
                     color: animal.color,
+                    action: (
+                      <FlatButton onClick={didWantToSeeDetails(animal.id)}>
+                        Details <ChevronRightIcon />
+                      </FlatButton>
+                    ),
                   },
                 };
               })}
