@@ -13,11 +13,23 @@ const useStyles = makeStyles({
 
 interface CardProps {
   elevation?: number;
+  withMargin?: boolean;
+  onClick?: () => void;
 }
-const Card: React.FC<CardProps> = ({ elevation = 0, children }) => {
+const Card: React.FC<CardProps> = ({
+  elevation = 0,
+  withMargin,
+  onClick,
+  children,
+}) => {
   const classes = useStyles();
   return (
-    <MaterialCard elevation={elevation} className={classes.root}>
+    <MaterialCard
+      elevation={elevation}
+      className={classes.root}
+      onClick={onClick}
+      style={{ margin: withMargin ? 16 : "inherit" }}
+    >
       <CardContent
         classes={{
           root: classes.content,
