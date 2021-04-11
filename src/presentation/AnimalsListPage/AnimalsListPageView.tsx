@@ -7,11 +7,13 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 const AnimalsListPageView = ({
   isFetching,
   animalsList,
+  filteredAnimalsList,
   searchString,
   setSearchString,
 }: {
   isFetching: boolean;
   animalsList: AnimalEntity[];
+  filteredAnimalsList: AnimalEntity[];
   searchString: string;
   setSearchString: (searchString: string) => void;
 }) => {
@@ -37,6 +39,13 @@ const AnimalsListPageView = ({
                 onChange={setSearchString}
               />
             </GridItem>
+          </GridContainer>
+          <GridContainer>
+            <ul>
+              {filteredAnimalsList.map((animal) => (
+                <li key={animal.id}>{animal.name}</li>
+              ))}
+            </ul>
           </GridContainer>
         </Card>
       </GridItem>
