@@ -1,0 +1,26 @@
+{
+  "Data": [
+    {
+      "Animal": { "Uri": "/api/v2/animal/557943", "Id": 557943 },
+      "IsDefault": true,
+      "Photo": "/storage/image/e4c748bd96a542f0b209c5675dc9286a-1617061586-1617061592-jpg/1024---n",
+      "PhotoThumbnailFormat": "/storage/image/e4c748bd96a542f0b209c5675dc9286a-1617061586-1617061592-jpg/<size>-0-",
+      "LastUpdatedUtc": "2021-03-29T23:46:32.723Z",
+      "Id": 711453
+    },
+    {
+      "Animal": { "Uri": "/api/v2/animal/443812", "Id": 443812 },
+      "IsDefault": true,
+      "Photo": "/storage/image/e3492fc8b7604c93a738ae5a8c169212-1617061451-1617061459-jpg/1024---n",
+      "PhotoThumbnailFormat": "/storage/image/e3492fc8b7604c93a738ae5a8c169212-1617061451-1617061459-jpg/<size>-0-",
+      "LastUpdatedUtc": "2021-03-29T23:44:19.047Z",
+      "Id": 711452
+    }
+  ],
+  "Paging": {
+    "Next": null,
+    "Previous": null,
+    "TotalPages": 1,
+    "TotalResults": 2
+  }
+}

@@ -1,12 +1,11 @@
 :root {
-  --main-bg-color: brown;
   --black-color: #000121;
   --orange-color: #f47500;
   --blue-color: #002fd6;
   --dark-gray-color: #707183;
   --light-gray-color: #f8f8fc;
   --middle-gray-color: #a1a2af;
-  --background-color: #e0e7fd;
+  --background-color: #f6f7fa;
 }
 
 body {
@@ -15,4 +14,59 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-color);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin: 96px 0;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.inline-badge {
+  background-color: var(--orange-color);
+  color: #fff;
+  border-radius: 100px;
+  padding: 4px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 8px;
+}
+
+#main-content {
+  padding: 0 96px;
+  margin: 96px 0;
+}
+
+.thumbnail-photo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50px;
+}
+
+@media only screen and (max-width: 900px) {
+  header {
+    margin: 58px 0;
+  }
+  header #logo {
+    max-width: 206px;
+  }
+  #main-content {
+    padding: 0 16px;
+    margin: 58px 0;
+  }
+
+  .thumbnail-photo {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+h2.animal-title {
+  font-size: 16px;
+  font-weight: 500;
 }

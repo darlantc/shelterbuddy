@@ -1,0 +1,412 @@
+{
+  "Data": [
+    {
+      "Name": null,
+      "DateOfBirthUtc": "2018-07-10T07:00:00Z",
+      "License": { "Tag": null, "Issuer": null },
+      "EuthanasiaReason": null,
+      "SecondaryEuthanasiaReason": null,
+      "EuthanasiaType": null,
+      "IsApprovedForEuthanasia": false,
+      "IsOwnerPresentForEuthanasia": false,
+      "DoNotEuthanise": false,
+      "DoNotEuthaniseReason": null,
+      "EuthanasiaAuthorisedBy": null,
+      "OtherEuthanasiaReason": null,
+      "AdoptionFee": null,
+      "AdoptionSummary": "",
+      "Age": {
+        "IsApproximate": true,
+        "Months": 8,
+        "Weeks": 2,
+        "Years": 2,
+        "AgeGroup": { "Name": "Newborn", "Id": 13 }
+      },
+      "Breed": {
+        "Primary": {
+          "Name": "Californian",
+          "Uri": "/api/v2/animal/species/breed/6492",
+          "Id": 6492
+        },
+        "PrimarySpecies": { "Uri": "/api/v2/animal/species/629", "Id": 629 },
+        "Secondary": null,
+        "SecondarySpecies": null,
+        "IsCrossBreed": true
+      },
+      "BreederRegistrationNumber": null,
+      "ContactLocation": {
+        "Name": "Region 53",
+        "Uri": "/api/v2/location/physicallocation/53",
+        "Id": 53
+      },
+      "Features": {
+        "CoatLength": null,
+        "PrimaryColour": "Black",
+        "SecondaryColour": "",
+        "CoatType": null,
+        "EarType": null,
+        "TailType": null,
+        "EyeColour": null
+      },
+      "Identification": {
+        "HasMicrochip": true,
+        "PrimaryMicrochipNumber": "985113001660437",
+        "PrimaryMicrochipBrand": { "Name": "Home Again", "Id": 14 },
+        "PrimaryMicrochipImplantDateUtc": "2018-09-04T07:00:00Z",
+        "SecondaryMicrochipNumber": null,
+        "SecondaryMicrochipBrand": null,
+        "SecondaryMicrochipImplantDateUtc": null,
+        "OtherIdentification": null,
+        "AcoNumber": null,
+        "TagColour": null,
+        "CollarType": null,
+        "Barcode": null,
+        "ShelterTag": null,
+        "CustomTag": null,
+        "CollarColour": null,
+        "OldDatabaseNumber": null
+      },
+      "Intake": {
+        "DateUtc": "2018-07-11T16:49:00Z",
+        "Region": {
+          "Name": "Region 53",
+          "Uri": "/api/v2/location/physicallocation/53",
+          "Id": 53
+        },
+        "Source": {
+          "Name": "Shelter Offspring",
+          "Uri": "/api/v2/animal/source/21",
+          "Id": 21
+        },
+        "ExtendedDetails": {
+          "Uri": "/api/v2/animal/sourcehistory/620165",
+          "Id": 620165
+        },
+        "Received": { "Name": "Underage", "Id": 1731 },
+        "SurrenderReason": null,
+        "BehaviourCondition": null,
+        "EmergencyBoardingReason": null
+      },
+      "LastUpdatedUtc": "2018-11-04T00:00:33.79Z",
+      "Location": {
+        "PhysicalLocation": {
+          "Name": "Region 53",
+          "Uri": "/api/v2/location/physicallocation/53",
+          "Id": 53
+        },
+        "Kennel": null,
+        "Shelter": {
+          "Name": "Gsc - 5500 - In Foster",
+          "Uri": "/api/v2/shelter/260",
+          "Id": 260
+        },
+        "MostRecentPhysicalLocation": {
+          "Name": "Region 53",
+          "Uri": "/api/v2/location/physicallocation/53",
+          "Id": 53
+        }
+      },
+      "Medical": {
+        "IsDeclawed": false,
+        "IsVaccinated": true,
+        "SpayedNeutered": "No",
+        "PreferredFood": null,
+        "PreviousMedicalDetails": null
+      },
+      "Owner": {
+        "Name": "Ainsley Cloke",
+        "Uri": "/api/v2/person/172724",
+        "Id": 172724
+      },
+      "Pattern": null,
+      "Sex": { "Name": "Female", "Uri": "/api/v2/animal/gender/2", "Id": 2 },
+      "Size": null,
+      "Status": {
+        "DateUtc": "2018-10-05T00:52:00Z",
+        "Name": "In Foster",
+        "Uri": "/api/v2/animal/status/4",
+        "Id": 4
+      },
+      "SubStatus": {
+        "Name": "Growth and Development",
+        "Uri": "/api/v2/animal/status/substatus/88",
+        "Id": 88
+      },
+      "SubStatuses": [
+        {
+          "Name": "Growth and Development",
+          "Uri": "/api/v2/animal/status/substatus/88",
+          "Id": 88
+        }
+      ],
+      "Type": {
+        "Name": "Rabbit",
+        "Uri": "/api/v2/animal/species/type/63",
+        "Id": 63
+      },
+      "AvailableForAdoptionDateUtc": "1900-01-01T00:00:00Z",
+      "DateOfWeighingUtc": "2018-09-04T07:00:00Z",
+      "CurrentRabiesVaccination": null,
+      "Litters": [{ "Uri": "/api/v2/animal/litter/8329", "Id": 8329 }],
+      "RabiesTag": null,
+      "Origin": null,
+      "DangerousAnimalInformation": null,
+      "LostFoundAddress": {
+        "Country": {
+          "Name": "United States",
+          "Uri": "/api/v2/location/country/1",
+          "Id": 1
+        },
+        "Jurisdiction": {
+          "Name": "City Of San Diego",
+          "Uri": "/api/v2/jurisdiction/2025",
+          "Id": 2025
+        },
+        "State": {
+          "Abbreviation": "CA",
+          "Name": "California",
+          "Uri": "/api/v2/location/state/55",
+          "Id": 55
+        },
+        "StreetType": null,
+        "Suburb": {
+          "Name": "San Diego",
+          "Uri": "/api/v2/location/suburb/91146",
+          "Id": 91146
+        },
+        "DeliveryType": null,
+        "PrintableString": "San Diego, CA, 92110, United States",
+        "PrintableStreetAddressString": "San Diego, CA, 92110, United States",
+        "CrossStreet": "",
+        "DirectionOne": "",
+        "DirectionTwo": "",
+        "ExtraAddressDetails": "",
+        "Postcode": "92110",
+        "PostcodeSuffix": null,
+        "StreetName": "",
+        "StreetNumber": "",
+        "UnitNumber": "",
+        "DeliveryNumber": "",
+        "IsApiValidated": false,
+        "Id": 2698546
+      },
+      "DateFoundUtc": "2018-07-11T07:00:00Z",
+      "DateLostUtc": null,
+      "IsDeleted": false,
+      "Icons": null,
+      "Weight": "2.8 lbs",
+      "MetaData": [],
+      "RelatedAnimals": null,
+      "Behaviour": null,
+      "Media": null,
+      "DistinguishingFeatures": "#5 on right ear",
+      "DueDateOutUtc": "2018-11-10T07:00:00Z",
+      "Id": 443680
+    },
+    {
+      "Name": null,
+      "DateOfBirthUtc": "2018-07-11T07:00:00Z",
+      "License": { "Tag": null, "Issuer": null },
+      "EuthanasiaReason": null,
+      "SecondaryEuthanasiaReason": null,
+      "EuthanasiaType": null,
+      "IsApprovedForEuthanasia": false,
+      "IsOwnerPresentForEuthanasia": false,
+      "DoNotEuthanise": false,
+      "DoNotEuthaniseReason": null,
+      "EuthanasiaAuthorisedBy": null,
+      "OtherEuthanasiaReason": null,
+      "AdoptionFee": null,
+      "AdoptionSummary": "",
+      "Age": {
+        "IsApproximate": false,
+        "Months": 8,
+        "Weeks": 2,
+        "Years": 2,
+        "AgeGroup": null
+      },
+      "Breed": {
+        "Primary": {
+          "Name": "Californian",
+          "Uri": "/api/v2/animal/species/breed/6492",
+          "Id": 6492
+        },
+        "PrimarySpecies": { "Uri": "/api/v2/animal/species/629", "Id": 629 },
+        "Secondary": null,
+        "SecondarySpecies": null,
+        "IsCrossBreed": true
+      },
+      "BreederRegistrationNumber": null,
+      "ContactLocation": {
+        "Name": "Region 53",
+        "Uri": "/api/v2/location/physicallocation/53",
+        "Id": 53
+      },
+      "Features": {
+        "CoatLength": null,
+        "PrimaryColour": "Black",
+        "SecondaryColour": "",
+        "CoatType": null,
+        "EarType": null,
+        "TailType": null,
+        "EyeColour": null
+      },
+      "Identification": {
+        "HasMicrochip": true,
+        "PrimaryMicrochipNumber": "985113001715483",
+        "PrimaryMicrochipBrand": { "Name": "Home Again", "Id": 14 },
+        "PrimaryMicrochipImplantDateUtc": "2018-09-04T07:00:00Z",
+        "SecondaryMicrochipNumber": null,
+        "SecondaryMicrochipBrand": null,
+        "SecondaryMicrochipImplantDateUtc": null,
+        "OtherIdentification": null,
+        "AcoNumber": null,
+        "TagColour": null,
+        "CollarType": null,
+        "Barcode": null,
+        "ShelterTag": null,
+        "CustomTag": null,
+        "CollarColour": null,
+        "OldDatabaseNumber": null
+      },
+      "Intake": {
+        "DateUtc": "2018-07-12T01:44:00Z",
+        "Region": {
+          "Name": "Region 53",
+          "Uri": "/api/v2/location/physicallocation/53",
+          "Id": 53
+        },
+        "Source": {
+          "Name": "Shelter Offspring",
+          "Uri": "/api/v2/animal/source/21",
+          "Id": 21
+        },
+        "ExtendedDetails": {
+          "Uri": "/api/v2/animal/sourcehistory/620426",
+          "Id": 620426
+        },
+        "Received": { "Name": "Underage", "Id": 1731 },
+        "SurrenderReason": null,
+        "BehaviourCondition": null,
+        "EmergencyBoardingReason": null
+      },
+      "LastUpdatedUtc": "2018-11-04T00:01:42.027Z",
+      "Location": {
+        "PhysicalLocation": {
+          "Name": "Region 53",
+          "Uri": "/api/v2/location/physicallocation/53",
+          "Id": 53
+        },
+        "Kennel": null,
+        "Shelter": {
+          "Name": "Gsc - 5500 - In Foster",
+          "Uri": "/api/v2/shelter/260",
+          "Id": 260
+        },
+        "MostRecentPhysicalLocation": {
+          "Name": "Region 53",
+          "Uri": "/api/v2/location/physicallocation/53",
+          "Id": 53
+        }
+      },
+      "Medical": {
+        "IsDeclawed": false,
+        "IsVaccinated": true,
+        "SpayedNeutered": "Unknown",
+        "PreferredFood": null,
+        "PreviousMedicalDetails": null
+      },
+      "Owner": {
+        "Name": "Ainsley Cloke",
+        "Uri": "/api/v2/person/172724",
+        "Id": 172724
+      },
+      "Pattern": null,
+      "Sex": { "Name": "Female", "Uri": "/api/v2/animal/gender/2", "Id": 2 },
+      "Size": null,
+      "Status": {
+        "DateUtc": "2018-10-05T00:52:00Z",
+        "Name": "In Foster",
+        "Uri": "/api/v2/animal/status/4",
+        "Id": 4
+      },
+      "SubStatus": {
+        "Name": "Growth and Development",
+        "Uri": "/api/v2/animal/status/substatus/88",
+        "Id": 88
+      },
+      "SubStatuses": [
+        {
+          "Name": "Growth and Development",
+          "Uri": "/api/v2/animal/status/substatus/88",
+          "Id": 88
+        }
+      ],
+      "Type": {
+        "Name": "Rabbit",
+        "Uri": "/api/v2/animal/species/type/63",
+        "Id": 63
+      },
+      "AvailableForAdoptionDateUtc": "1900-01-01T00:00:00Z",
+      "DateOfWeighingUtc": "2018-09-04T07:00:00Z",
+      "CurrentRabiesVaccination": null,
+      "Litters": [{ "Uri": "/api/v2/animal/litter/8329", "Id": 8329 }],
+      "RabiesTag": null,
+      "Origin": null,
+      "DangerousAnimalInformation": null,
+      "LostFoundAddress": {
+        "Country": {
+          "Name": "United States",
+          "Uri": "/api/v2/location/country/1",
+          "Id": 1
+        },
+        "Jurisdiction": {
+          "Name": "City Of San Diego",
+          "Uri": "/api/v2/jurisdiction/2025",
+          "Id": 2025
+        },
+        "State": {
+          "Abbreviation": "CA",
+          "Name": "California",
+          "Uri": "/api/v2/location/state/55",
+          "Id": 55
+        },
+        "StreetType": null,
+        "Suburb": null,
+        "DeliveryType": null,
+        "PrintableString": "CA, United States",
+        "PrintableStreetAddressString": "CA, United States",
+        "CrossStreet": "",
+        "DirectionOne": "",
+        "DirectionTwo": "",
+        "ExtraAddressDetails": "",
+        "Postcode": "",
+        "PostcodeSuffix": null,
+        "StreetName": "",
+        "StreetNumber": "",
+        "UnitNumber": "",
+        "DeliveryNumber": "",
+        "IsApiValidated": false,
+        "Id": 2699858
+      },
+      "DateFoundUtc": "2018-07-11T07:00:00Z",
+      "DateLostUtc": null,
+      "IsDeleted": false,
+      "Icons": null,
+      "Weight": "2.8 lbs",
+      "MetaData": [],
+      "RelatedAnimals": null,
+      "Behaviour": null,
+      "Media": null,
+      "DistinguishingFeatures": "#9 on right ear",
+      "DueDateOutUtc": "2018-11-10T07:00:00Z",
+      "Id": 443812
+    }
+  ],
+  "Paging": {
+    "Next": "/api/v2/animal/list?page=2&pageSize=100",
+    "Previous": null,
+    "TotalPages": 3,
+    "TotalResults": 266
+  }
+}
