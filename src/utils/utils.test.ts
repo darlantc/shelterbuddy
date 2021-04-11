@@ -1,4 +1,4 @@
-import { generateRandomInteger } from "./utils";
+import { generateRandomInteger, textIncludesSearchString } from "./utils";
 
 describe("generateRandomInteger", () => {
   it("should generate integer without parameters", () => {
@@ -41,6 +41,14 @@ describe("generateRandomInteger", () => {
     expect(() => generateRandomInteger({ min: 9999, max: 1000 })).toThrow(
       TypeError
     );
+  });
+});
+
+describe("should find text in text", () => {
+  const textToSearch = "Chyna, Alfonzo, Emelie";
+  it("textIncludesSearchString", () => {
+    expect(textIncludesSearchString(textToSearch, "melie")).toBe(true);
+    expect(textIncludesSearchString(textToSearch, "maria")).toBe(false);
   });
 });
 
