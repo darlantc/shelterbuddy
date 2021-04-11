@@ -4,12 +4,14 @@ import { makeStyles } from "@material-ui/core/styles";
 import { GridContainer, GridItem } from "../../components/Grid";
 import CollapsibleList from "../../components/Collapse/CollapsibleList";
 import RaisedButton from "../../components/Button/RaisedButton";
+import Paginate from "../../components/Paginate/Paginate";
 import AnimalPhoto from "../../components/Animal/AnimalPhoto";
 import { ChevronRightIcon } from "../../components/Icons/Icons";
 
 import AnimalEntity from "../../entities/AnimalEntity";
 
 import { blackColor, darkGrayColor } from "../../assets/styles/styles";
+import { dynamicSortByProperty } from "../../utils/sortUtils";
 const useStyles = makeStyles({
   label: {
     fontWeight: 500,
@@ -37,45 +39,51 @@ const AnimalsListAsCard: React.FC<AnimalsListAsCardProps> = ({
     </p>
   );
 
+  animalsList.sort(dynamicSortByProperty("name"));
+
   return (
     <div style={{ marginTop: 30 }}>
-      <CollapsibleList
-        items={animalsList.map((animal) => {
-          return {
-            id: animal.id,
-            header: (
-              <GridContainer alignItems="center">
-                <GridItem>
-                  <AnimalPhoto
-                    id={animal.id}
-                    alt={animal.name || animal.type}
-                  />
-                </GridItem>
-                <GridItem xs>
-                  <h2 className="animal-title">{animal.name || "-"}</h2>
-                </GridItem>
-              </GridContainer>
-            ),
-            details: (
-              <GridContainer>
-                <GridItem xs>
-                  {renderLabel("Type", animal.type)}
-                  {renderLabel("Breed", animal.breed)}
-                  {renderLabel("Gender", animal.gender)}
-                  {renderLabel("Color", animal.color)}
-                  <RaisedButton
-                    large
-                    fullWidth
-                    onClick={didWantToSeeDetails(animal.id)}
-                  >
-                    Details <ChevronRightIcon />
-                  </RaisedButton>
-                </GridItem>
-              </GridContainer>
-            ),
-          };
-        })}
-      />
+      <Paginate<AnimalEntity> itemsList={animalsList} itemsPerPage={10}>
+        {({ slicedList }) => (
+          <CollapsibleList
+            items={slicedList.map((animal) => {
+              return {
+                id: animal.id,
+                header: (
+                  <GridContainer alignItems="center">
+                    <GridItem>
+                      <AnimalPhoto
+                        id={animal.id}
+                        alt={animal.name || animal.type}
+                      />
+                    </GridItem>
+                    <GridItem xs>
+                      <h2 className="animal-title">{animal.name || "-"}</h2>
+                    </GridItem>
+                  </GridContainer>
+                ),
+                details: (
+                  <GridContainer>
+                    <GridItem xs>
+                      {renderLabel("Type", animal.type)}
+                      {renderLabel("Breed", animal.breed)}
+                      {renderLabel("Gender", animal.gender)}
+                      {renderLabel("Color", animal.color)}
+                      <RaisedButton
+                        large
+                        fullWidth
+                        onClick={didWantToSeeDetails(animal.id)}
+                      >
+                        Details <ChevronRightIcon />
+                      </RaisedButton>
+                    </GridItem>
+                  </GridContainer>
+                ),
+              };
+            })}
+          />
+        )}
+      </Paginate>
     </div>
   );
 };
