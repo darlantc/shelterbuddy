@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { HttpService } from "./services/HttpService";
+import ShelterBuddyService from "./services/ShelterBuddyService";
 import { UseCasesContext } from "./useCases/UseCasesContext";
 import RequestAnimalsUseCase from "./useCases/RequestAnimalsUseCase";
 import RequestAnimalPhotoUseCase from "./useCases/RequestAnimalPhotoUseCase";
@@ -7,12 +7,12 @@ import RequestAnimalPhotoUseCase from "./useCases/RequestAnimalPhotoUseCase";
 import Header from "./components/Header/Header";
 import AnimalsListPageViewModel from "./presentation/AnimalsListPage/AnimalsListPageViewModel";
 
-const App = ({ httpService }: { httpService: HttpService }) => {
+const App = ({ sbService }: { sbService: ShelterBuddyService }) => {
   return (
     <UseCasesContext.Provider
       value={{
-        requestAnimalsUseCase: new RequestAnimalsUseCase(httpService),
-        requestAnimalPhotoUseCase: new RequestAnimalPhotoUseCase(httpService),
+        requestAnimalsUseCase: new RequestAnimalsUseCase(sbService),
+        requestAnimalPhotoUseCase: new RequestAnimalPhotoUseCase(sbService),
       }}
     >
       <Fragment>

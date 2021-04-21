@@ -1,37 +1,18 @@
-import { HttpService } from "../services/HttpService";
+import ShelterBuddyService from "../services/ShelterBuddyService";
 
 import AnimalPhotoEntity from "../entities/AnimalPhotoEntity";
 
 class RequestAnimalPhotoUseCase {
-  httpService: HttpService;
+  sbService: ShelterBuddyService;
 
-  constructor(httpService: HttpService) {
-    this.httpService = httpService;
+  constructor(sbService: ShelterBuddyService) {
+    this.sbService = sbService;
   }
 
   requestAnimalPhoto = async (
     animalId: number
   ): Promise<AnimalPhotoEntity | null> => {
-    const url = "assets/data/AnimalPhotoList.json";
-
-    try {
-      const { statusCode, data } = await this.httpService.get(url);
-      if (statusCode === 200 && data?.Data) {
-        const animalData = data.Data.find(
-          (itemData: any) => itemData?.Animal?.Id === animalId
-        );
-        if (animalData) {
-          return AnimalPhotoEntity.fromJson(animalData);
-        }
-      }
-    } catch (error) {
-      console.error(
-        "RequestAnimalPhotoUseCase requestAnimalPhoto error",
-        error
-      );
-    }
-
-    return null;
+    return await this.sbService.getAnimalPhoto(animalId);
   };
 }
 

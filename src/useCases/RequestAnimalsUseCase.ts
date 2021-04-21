@@ -1,33 +1,15 @@
 import AnimalEntity from "../entities/AnimalEntity";
-import { HttpService } from "../services/HttpService";
+import ShelterBuddyService from "../services/ShelterBuddyService";
 
 class RequestAnimalsUseCase {
-  httpService: HttpService;
+  sbService: ShelterBuddyService;
 
-  constructor(httpService: HttpService) {
-    this.httpService = httpService;
+  constructor(ShelterBuddyService: ShelterBuddyService) {
+    this.sbService = ShelterBuddyService;
   }
 
   request = async (): Promise<AnimalEntity[]> => {
-    const url = "assets/data/AnimalList.json";
-
-    const list: AnimalEntity[] = [];
-
-    try {
-      const { statusCode, data } = await this.httpService.get(url);
-      if (statusCode === 200 && data?.Data) {
-        data.Data.forEach((itemData: any) => {
-          const animal = AnimalEntity.fromJson(itemData);
-          if (animal) {
-            list.push(animal);
-          }
-        });
-      }
-    } catch (error) {
-      console.error("RequestAnimalsUseCase request error", error);
-    }
-
-    return list;
+    return await this.sbService.getAnimals();
   };
 }
 
