@@ -4,10 +4,10 @@ import "./assets/styles/index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { HttpService } from "./services/httpService/HttpService";
-import FetchHttpService from "./services/httpService/FetchHttpService";
+import AxiosHttpService from "./services/httpService/AxiosHttpService";
 import ShelterBuddyService from "./services/ShelterBuddyService";
 
-const httpService: HttpService = new FetchHttpService(
+const httpService: HttpService = new AxiosHttpService(
   // "https://shelterbuddy-us-uat.shelterbuddy.io"
   "http://localhost:3000"
 );
